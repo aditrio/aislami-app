@@ -82,6 +82,7 @@
                   <b>Kisah-kisah Nabi & Rasul hebat-hebat loo</b>
                 </h3></v-card-text
               >
+              <kisah />
             </v-card>
           </v-tab-item>
           <v-tab-item value="bacaansholat">
@@ -91,6 +92,7 @@
                   <b>Jangan sampai lupa bacaan sholat yaaa</b>
                 </h3></v-card-text
               >
+              <bacaan />
             </v-card>
           </v-tab-item>
           <v-tab-item value="doaharian">
@@ -100,6 +102,7 @@
                   <b>Berdoa itu penting loo</b>
                 </h3></v-card-text
               >
+              <doa />
             </v-card>
           </v-tab-item>
         </v-tabs-items>
@@ -112,11 +115,17 @@
 <script>
 import Iqra from "../components/Iqra";
 import AlQuran from "../components/AlQuran";
+import Kisah from "../components/Kisah";
+import Bacaan from "../components/Bacaan";
+import Doa from "../components/Doa.vue";
 
 export default {
   components: {
     Iqra,
     AlQuran,
+    Kisah,
+    Bacaan,
+    Doa,
   },
   data() {
     return {

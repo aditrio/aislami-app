@@ -6,11 +6,16 @@
       </div>
 
       <v-spacer></v-spacer>
-      <v-btn class="mr-2" dense @click="$router.replace('/')">
-        <v-icon>mdi-home</v-icon>
-        <span class="ml-2">Home</span>
+      <v-btn
+        v-if="$router.history.current.path != '/'"
+        class="mr-2"
+        dense
+        @click="$router.replace('/')"
+      >
+        <v-icon>mdi-arrow-left-circle</v-icon>
+        <span class="ml-2">Kembali</span>
       </v-btn>
-      <v-btn dense>
+      <v-btn dense @click="$router.push('/about')">
         <v-icon>mdi-at</v-icon>
         <span class="ml-2">Tentang</span>
       </v-btn>
@@ -32,9 +37,7 @@
 export default {
   name: "App",
 
-  data: () => ({
-    //
-  }),
+  data: () => ({}),
 };
 </script>
 
